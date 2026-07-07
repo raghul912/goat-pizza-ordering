@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goat Pizza</title>
+  <link rel="stylesheet" href="pizza.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🐐 Goat Pizza</div>
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Build Your Perfect Pizza</h1>
+      <p>Fresh ingredients, fired to perfection</p>
+    </section>
+    <section class="menu">
+      <h2>Our Pizzas</h2>
+      <div class="pizza-grid" id="pizza-grid"></div>
+    </section>
+  </main>
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+  <aside class="cart" id="cart">
+    <div class="cart-header">
+      <h2>Your Order</h2>
+      <button class="close-btn" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="empty-msg">Your cart is empty</p>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="total-row">
+        <span>Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Place Order</button>
+    </div>
+  </aside>
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal">
+      <div class="modal-icon">🎉</div>
+      <h2>Order Placed!</h2>
+      <p id="modal-msg"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  <script src="pizza.js"></script>
+</body>
+</html>
